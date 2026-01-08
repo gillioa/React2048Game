@@ -32,11 +32,13 @@ export default function Game2048() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [move]);
 
-  const gridBackground = useMemo(() => 
-    Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, i) => (
-      <div key={`cell-${i}`} style={styles.cell}/>
-    )), 
-  []);
+  const gridBackground = useMemo(
+    () =>
+      Array.from({ length: GRID_SIZE * GRID_SIZE }, (_, i) => (
+        <div key={`cell-${i}`} style={styles.cell} />
+      )),
+    []
+  );
 
   return (
     <div style={styles.container}>
@@ -80,7 +82,7 @@ export default function Game2048() {
             </motion.div>
           ))}
         </AnimatePresence>
-        
+
         <AnimatePresence>
           {status !== 'PLAYING' && (
             <motion.div style={styles.overlay}>
