@@ -1,4 +1,4 @@
-# 🧩 2048 AI Engine
+# 🧩 2048 Game with AI Assistance in-game
 An advanced implementation of the classic 2048 puzzle game built with React, TypeScript, and Framer Motion, featuring an integrated AI hint system powered by Ollama.
 ## ✨ Features
 - 🎬 Smooth Animations: Powered by Framer Motion for fluid tile sliding and merging.
